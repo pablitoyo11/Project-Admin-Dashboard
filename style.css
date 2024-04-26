@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100px;
+    max-height: 100px;
+}
+ul, li{
+    list-style-type: none;
+    text-transform: uppercase;
+    color: rgb(255, 204, 142);
+    text-shadow: 1px 0 #000000;
+    padding: 3px;
+    margin-left: 3px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr  5fr;
+    grid-template-rows: auto 5fr;
+    gap: 1px;
+}
+.dashboard, .header, .mainContent{
+    border-width: 2px;
+    border-color: aquamarine;
+    border-style: groove;
+    padding: 7px; 
+    border-radius: 5px;
+}
+.dashboard{
+    background-color: rgb(0, 102, 255);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.dashboardNav{
+    grid-row: 2/3;
+    display: grid;
+    gap: 5px;
+    grid-auto-rows: min-content;
+}
+.dashboardTop{
+    place-self: center;
+}
+.header{
+    padding: 20px;    
+    background-color: #fff;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+}
+.searchDiv{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.smallTopLogo{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.hiThere{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.interactButtons{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.mainContent{
+    background-color: #bbbbbb;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 20px;
+}
+.projects{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.projectsGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.announcements{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.announcementsGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+.trending{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.trendingGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+.trendingGrid>div{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+}
+.trendingGrid>div>img{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    place-self: center;
+}
+.trendingGrid>div>span{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: end;
+}
+.trendingGrid>div>p{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: start;
+}
