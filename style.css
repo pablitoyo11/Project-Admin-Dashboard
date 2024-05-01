@@ -3,14 +3,24 @@
     padding: 0;
 }
 img{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 50px;
+    max-height: 50px;
+}
+button, input[type="fsrch"]{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    margin: 5px;
 }
 ul, li{
     list-style-type: none;
-    text-transform: uppercase;
+    /*text-transform: uppercase;
     color: rgb(255, 204, 142);
-    text-shadow: 1px 0 #000000;
+    text-shadow: 1px 0 #000000;*/
     padding: 3px;
     margin-left: 3px;
 }
@@ -28,7 +38,7 @@ ul, li{
     border-radius: 5px;
 }
 .dashboard{
-    background-color: rgb(0, 102, 255);
+    background-color: #54aad1;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     display: grid;
@@ -43,8 +53,18 @@ ul, li{
 .dashboardTop{
     place-self: center;
 }
+.navText{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 8px;
+}
+.dashboardNavItems{
+    display: grid;
+    grid-template-columns: auto 1fr;    
+    align-items: center;
+}
 .header{
-    padding: 20px;    
+    padding: 10px 30px;    
     background-color: #fff;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -57,17 +77,88 @@ ul, li{
     grid-column: 1/2;
     grid-row: 1/2;
 }
+.searchDiv>form{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+input[type="fsrch"]{
+    background-color: #dfdfdf;
+}
+.searchInput{
+    grid-column: 2/3;
+    border-radius: 8px;
+    width: 100%;
+}
+.searchBtn{
+    grid-column: 1/2;
+}
+.searchBtn>img{
+    height: 15px;
+}
 .smallTopLogo{
     grid-column: 2/3;
     grid-row: 1/2;
+    margin-left: auto;
 }
+.smallTopLogo{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    align-items: center;
+}
+.smallTopLogo>*{
+    font-weight: 800;
+}
+.smallTopLogo>.smallTopUser{
+    border-radius: 50%;
+    max-width: 40px;
+    min-height: 40px;
+}
+.smallTopLogo>.smallTopBell{
+    max-width: 30px;
+    min-height: 30px;
+}    
 .hiThere{
     grid-column: 1/2;
     grid-row: 2/3;
 }
+.hiThere{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 15px;
+}
+.hiThere>img{
+    border-radius: 50%;
+    max-width: 60px;
+    min-height: 60px;
+}
+.hiThereUser>span{
+    font-weight: 800;
+    font-size: 12px;
+}
+.hiThereUser>p{
+    font-weight: 800;
+    font-size: 22px;
+}
 .interactButtons{
     grid-column: 2/3;
     grid-row: 2/3;
+}
+.interactButtons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+.interactBtn{
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 800;
 }
 .mainContent{
     background-color: #bbbbbb;
@@ -82,23 +173,75 @@ ul, li{
     grid-column: 1/2;
     grid-row: 1/3;
 }
+.projects>*{
+    padding: 10px;
+}
 .projectsGrid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+}
+.project{
+    padding-left: 10px;
+    padding-top: 22px;
+    position: relative;
+}
+.projectTitle{
+    font-size: 18px;
+}
+.projectText{
+    font-size: 14px;
+    color: #616161;
+}
+.projectBtns{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: aliceblue;
+    padding: 5px 10px 7px 5px;
+    border-radius: 5px;
+}
+.projectBtns>img{
+    height: 18px;
+    padding: 3px;
 }
 .announcements{
     grid-column: 2/3;
     grid-row: 1/2;
 }
+.announcements>*{
+    padding: 10px;
+}
 .announcementsGrid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: auto;
+}
+.announcementTitle{
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+}
+.announcement{
+    margin: 5px;
+}
+.announcementText{
+    color: rgb(119, 119, 119);
+    font-size: 11px;
+}
+.announcementsGrid>hr{
+    height: 1px;
+    background:rgb(126, 126, 126);
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }
 .trending{
     grid-column: 2/3;
     grid-row: 2/3;
+}
+.trending>*{
+    padding: 10px;
 }
 .trendingGrid{
     display: grid;
@@ -125,4 +268,26 @@ ul, li{
     grid-column: 2/3;
     grid-row: 2/3;
     align-self: start;
+}
+.trendingLogo{
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+}
+.trendingAt{
+    font-size: 11px;
+    font-weight: 800;
+}
+.tendingInfo{
+    font-size: 10px;
+    color: #727272;
+}
+.trendingGrid, .announcementsGrid, .project{
+    background-color: aliceblue;
+    border-radius: 7px;
+    margin: 0px;
+    box-shadow: 5px 5px 12px 0px #727272;
+}
+.project{
+   border-left: yellow solid 7px;
 }
